@@ -2,7 +2,6 @@ const express = require('express');
 const router = express.Router();
 
 const booksHandler = require('./books.handler.js');
-const pblshComp = require('../pblsh_compnies/pblsh_compnies.handler.js')
 
 router.get('/', async (req, res) => {
     res.json(await booksHandler.searchBooks());
@@ -18,8 +17,8 @@ router.post('/', async (req, res) => {
 });
 
 router.put('/:id', async (req, res) =>{
-    const { title, amount, pblsh_comp } = req.body;
-    res.json(await booksHandler.create(title, amount, pblsh_comp, req.params.id));
+    const { title, amount, pblsh_comp, list_authors } = req.body;
+    res.json(await booksHandler.create(title, amount, pblsh_comp, list_authors, req.params.id));
 });
 
 router.delete('/:id', async (req, res) => {
