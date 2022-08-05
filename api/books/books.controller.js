@@ -12,8 +12,8 @@ router.get('/:id', async (req, res) =>{
 });
 
 router.post('/', async (req, res) => {
-    const { title, amount, pblsh_comp } = req.body;
-    res.json(await booksHandler.create(title, amount, pblsh_comp));
+    const { title, amount, pblsh_comp,  authors} = req.body;
+    res.json(await booksHandler.create(title, amount, pblsh_comp, authors));
 });
 
 router.put('/:id', async (req, res) =>{
