@@ -12,13 +12,13 @@ router.get('/:id', async (req, res) =>{
 });
 
 router.post('/', async (req, res) => {
-    const { idLivros, idClient } = req.body;
-    res.json(await reservationsHandler.create(idLivros, idClient));
+    const { idBooks, idClient } = req.body;
+    res.json(await reservationsHandler.create(idBooks, idClient));
 });
 
 router.put('/:id', async (req, res) =>{
-    const { idLivros, idClient } = req.body;
-    res.json(await reservationsHandler.create(idLivros, idClient, req.params.id));
+    const { idBooks, idClient } = req.body;
+    res.json(await reservationsHandler.create(idBooks, idClient, req.params.id));
 });
 
 router.delete('/:id', async (req, res) => {

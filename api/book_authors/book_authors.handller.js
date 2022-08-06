@@ -9,10 +9,11 @@ async function searchBooksAuthorsId(id){
 };
 
 async function create(idAuthor, idBook, idAuthorBook) {
+    
     if(idAuthorBook){
-        await crud.save('books_authors', idAuthorBook, {idAuthor, idBook });
+        await crud.save('books_authors', idAuthorBook, {autor, book });
     }else{
-        await crud.save('books_authors', null, {idAuthor, idBook });
+        await crud.save('books_authors', null, {autor, book });
     }
     return searchBookAuthor();
 }
