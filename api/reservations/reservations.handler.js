@@ -25,7 +25,7 @@ async function create(idBooks, idClient, idReservation) {
 
 
     for (let i = 0; i < reserve.length; i++) {
-        for(let y = 0; y < reserve[i].booksNames.length; j++) {
+        for(let y = 0; y < reserve[i].booksNames.length; y++) {
             for(let j=0; j<booksNames.length; j++){
                 if(reserve[i].booksNames[y] == booksNames[j]){
                     console.log("aaaaa");
